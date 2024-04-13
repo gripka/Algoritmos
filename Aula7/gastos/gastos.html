@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Gastos</title>
+    <script src="gastos.js" defer></script>
+</head>
+<body>
+    <h1>Cadastro de Gastos</h1>
+    <form id="gastoForm">
+        <label for="tipo">Tipo de Gasto:</label>
+        <input type="text" id="tipo" name="tipo" required><br>
+        
+        <label for="valor">Valor do Gasto:</label>
+        <input type="number" id="valor" name="valor" required><br>
+        
+        <button type="button" id="cadastrarGasto">Cadastrar</button>
+        <button type="button" id="consultarGastos">Consultar Dados</button>
+    </form>
+    
+    <div id="mensagem"></div>
+    <div id="exibirGastos"></div>
+</body>
+</html>

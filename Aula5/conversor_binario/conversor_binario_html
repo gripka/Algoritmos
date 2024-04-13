@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>binario</title>
+</head>
+<body>
+    <h1>Conversor binario</h1>
+    <script src="conversor_binario.js"></script>
+</body>
+</html>

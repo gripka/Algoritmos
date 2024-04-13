@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Atividades</title>
+    <script src="filme.js" defer></script>
+</head>
+<body>
+    <h1>Registro de Atividades</h1>
+    <form id="atividadeForm">
+        <label for="esporte">Tipo de atividade:</label>
+        <input type="text" id="esporte" name="esporte" required><br>
+        
+        <label for="duracao">Duração da atividade em minutos:</label>
+        <input type="number" id="duracao" name="duracao" required><br>
+        
+        <button type="button" id="registrarAtividade">Registrar Atividade</button>
+        <button type="button" id="consultarAtividades">Consultar Atividades</button>
+    </form>
+    
+    <div id="mensagem"></div>
+    <div id="exibirAtividades"></div>
+</body>
+</html>

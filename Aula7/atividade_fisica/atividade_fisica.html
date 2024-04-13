@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Atividades</title>
+    <script src="atividade_fisica.js" defer></script>
+</head>
+<body>
+    <h1>Cadastro de Atividades</h1>
+    <form id="atividadeForm">
+        <label for="esporte">Tipo de Atividade:</label>
+        <input type="text" id="esporte" name="esporte" required><br>
+        
+        <label for="duracao">Duração da Atividade (em minutos):</label>
+        <input type="number" id="duracao" name="duracao" required><br>
+        
+        <button type="button" id="cadastrarAtividade">Cadastrar</button>
+        <button type="button" id="consultarAtividades">Consultar Dados</button>
+    </form>
+    
+    <div id="mensagem"></div>
+    <div id="exibirAtividades"></div>
+</body>
+</html>

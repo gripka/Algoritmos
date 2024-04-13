@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Temperaturas</title>
+    <script src="temperatura.js" defer></script>
+</head>
+<body>
+    <h1>Cadastro de Temperaturas</h1>
+    <form id="temperaturaForm">
+        <label for="temperatura">Temperatura Máxima do Dia:</label>
+        <input type="number" id="temperatura" name="temperatura" required><br>
+        
+        <button type="button" id="cadastrarTemperatura">Cadastrar</button>
+        <button type="button" id="consultarTemperaturas">Consultar Dados</button>
+    </form>
+    
+    <div id="mensagem"></div>
+</body>
+</html>
