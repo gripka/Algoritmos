@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Vendedores</title>
+    <script src="cadVendedor.js" defer></script>
+</head>
+<body>
+    <h1>Cadastro de Vendedores</h1>
+    <form id="vendedorForm">
+        <label for="nome">Nome do Vendedor:</label>
+        <input type="text" id="nome" name="nome" required><br>
+        <br>
+        <label for="matricula">Matrícula do Vendedor:</label>
+        <input type="text" id="matricula" name="matricula" required><br>
+        <br>
+        <button type="button" id="cadastrarVendedor">Cadastrar</button>
+        <button type="button" id="consultarVendedores">Consultar Vendedores</button>
+    </form>
+    
+    <div id="mensagem"></div>
+    <div id="exibirVendedores"></div>
+</body>
+</html>

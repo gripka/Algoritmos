@@ -1,6 +1,7 @@
 let numeroSecreto;
 let tentativas;
 let palpites;
+let jogoAtivo;
 
 window.onload = function() {
     document.getElementById('fazerPalpite').addEventListener('click', jogar);
@@ -12,8 +13,8 @@ window.onload = function() {
 function iniciarJogo() {
     numeroSecreto = Math.floor(Math.random() * 100) + 1;
     palpites = [];
+    jogoAtivo = true;
     definirTentativas();
-    console.log(numeroSecreto)
     document.getElementById('mensagem').textContent = "O jogo começou! Você tem " + tentativas + " tentativas para adivinhar o número.";
 }
 
@@ -21,7 +22,7 @@ function definirTentativas() {
     let nivel = document.getElementById('nivel').value;
     switch(nivel) {
         case '1':
-            tentativas = 100;
+            tentativas = 15;
             break;
         case '2':
             tentativas = 5;
@@ -33,7 +34,7 @@ function definirTentativas() {
 }
 
 function jogar() {
-    if (tentativas <= 0) {
+    if (!jogoAtivo) {
         return;
     }
 
@@ -55,14 +56,16 @@ function jogar() {
 
     if (numero === numeroSecreto) {
         document.getElementById('mensagem').textContent = `Parabéns! Você acertou o número em ${palpites.length} tentativas!`;
-        tentativas = 0;
+        jogoAtivo = false;
     } else if (tentativas === 0) {
         document.getElementById('mensagem').textContent = `Suas tentativas acabaram! O número secreto era ${numeroSecreto}. Clique em 'Reiniciar Jogo' para jogar novamente.`;
+        jogoAtivo = false;
     } else {
         let dica = numero < numeroSecreto ? "maior" : "menor";
         document.getElementById('mensagem').textContent = `O número secreto é ${dica} que ${numero}. Você tem ${tentativas} tentativas restantes.`;
     }
 }
+
 
 // Numero aleatorio de 1 até 100
 // 5 tentativas para acertar
